@@ -16,7 +16,7 @@ public class ChuckNorris {
             InputStreamReader is = new InputStreamReader(url.openStream());
             JSONParser parser = new JSONParser();
             JSONObject json=(JSONObject) parser.parse(is);
-            System.out.println(json);
+            System.out.println(json.get("value"));
         } catch (MalformedURLException e) {
             System.out.println("URL has a problem!");
         } catch (IOException e) {
